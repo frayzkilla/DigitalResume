@@ -16,10 +16,6 @@ setTimeout(function(){
     }, 1500);
 }, 100);
 
-/* document.querySelector(".am-go").addEventListener("click", function(){
-    window.location.hash="intro-go";
-}) */
-
 $('.fa-github').on('click', function(){
     /* $(location).attr('href', "https://github.com/frayzkilla"); */
     window.open("https://github.com/frayzkilla", '_blank');
