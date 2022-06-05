@@ -8,6 +8,7 @@
 * {
     margin: 0;
     padding: 0;
+    user-select: none
 }
 
 ::-webkit-scrollbar {
@@ -32,7 +33,7 @@ body{
     background: url("img/digital.png") center center/cover no-repeat;
     background-attachment: fixed;
     width: 100%;
-    height: 710px;
+    height: 100%;
 
   }
 
@@ -40,7 +41,7 @@ body{
   .load-wrapper {
     position: absolute;
     width: 100%;
-    height: 720px;
+    height: 100%;
     background: #000;
   }
 
@@ -238,6 +239,53 @@ body{
     }
   }
 
+  @-webkit-keyframes slide-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-blurred-left {
+    0% {
+      -webkit-transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+              transform: translateX(-1000px) scaleX(2.5) scaleY(0.2);
+      -webkit-transform-origin: 100% 50%;
+              transform-origin: 100% 50%;
+      -webkit-filter: blur(40px);
+              filter: blur(40px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateX(0) scaleY(1) scaleX(1);
+              transform: translateX(0) scaleY(1) scaleX(1);
+      -webkit-transform-origin: 50% 50%;
+              transform-origin: 50% 50%;
+      -webkit-filter: blur(0);
+              filter: blur(0);
+      opacity: 1;
+    }
+  }
+  
+
+.slide-in-blurred-left {
+  -webkit-animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+          animation: slide-in-blurred-left 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
 .fade-out {
 	-webkit-animation: fade-out 1.5s ease-out both;
 	        animation: fade-out 1.5s ease-out both;
@@ -259,6 +307,7 @@ body{
 }
 
 .btn {
+    font-family: 'Fira Mono', monospace;
     color: white;
     border: #007ba17e;
 }
@@ -266,7 +315,7 @@ body{
 
 .container-fluid {
   width: 100%;
-  height: 710px;
+  height: 100%;
 }
 
 .noise-effect {
@@ -369,14 +418,14 @@ body{
   font-family: Shapiro, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-size: 8em;
   font-weight: 900;
-  color: #00000094;
+  color: #000000bf;
   
   /* text-shadow: rgb(255, 255, 255) 1px 0px 0px, rgb(255, 255, 255) 0.540302px 0.841471px 0px, rgb(255, 255, 255) -0.416147px 0.909297px 0px, rgb(255, 255, 255) -0.989992px 0.14112px 0px, rgb(255, 255, 255) -0.653644px -0.756802px 0px, rgb(255, 255, 255) 0.283662px -0.958924px 0px, rgb(255, 255, 255) 0.96017px -0.279415px 0px; */
 }
 
 .intro {
   margin-left: 10px;
-  margin-top: 50px;
+  margin-top: 80px;
   margin-bottom: 50px;
 }
 
@@ -488,4 +537,99 @@ btn:hover {
   width: 600px;
   margin-bottom: 250px;
   font-size: medium;
+}
+
+.w-wrap {
+  position: relative;
+  z-index: 8;
+  margin-left: 25%;
+  color: rgba(238, 238, 238, 0.882);
+  font-size: 20px;
+  font-family: 'Fira Mono', monospace;
+}
+
+.taskmaster-desc, .weather-desc {
+  height: 200px;
+  width: 600px;
+  margin-top: 250px;
+  margin-right: 8%;
+  opacity: 0;
+}
+
+.w-descs {
+  position: relative;
+  z-index: 7;
+  color: #eee;
+}
+
+.contacts-wrapper {
+  margin-left: 18%;
+  margin-top: 200px;
+}
+
+.icons {
+  width: 100%;
+  height: 200px;
+  margin-left: -200px;
+  margin-top: 150px;
+}
+
+.icon-white {
+  color: white;
+  height: 40px;
+  width: 40px;
+  margin: 30px;
+  padding: 5px;
+  font-size: 2em;
+  text-shadow: 0.06rem 0 0.06rem #ea36af, -0.125rem 0 0.06rem #75fa69;
+  letter-spacing: 0.125em;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+.icon-white:hover {
+  filter: blur(1px);
+}
+
+.text-field {
+  opacity: 0;
+  width: 400px;
+  margin-left: 40%;
+  color: rgba(238, 238, 238, 0.526);
+  font-size: 25px;
+  font-family: 'Fira Mono', monospace;
+  animation-duration: 0.01s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  cursor: pointer;
+}
+
+.phone_copied, .email_copied {
+  color: rgba(238, 238, 238, 0.526);
+  font-size: 25px;
+  font-family: 'Fira Mono', monospace;
+  margin-top: -100px;
+}
+
+a {
+  text-decoration: none;
+  color: #eee;
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(52, 52, 52);
+}
+
+.h:hover {
+  background: rgba(255, 255, 255, 0.353);
+  border-radius: 3px;
+}
+
+.name:hover {
+  background: rgba(0, 0, 0, 0);
 }

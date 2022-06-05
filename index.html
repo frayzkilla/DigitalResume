@@ -9,6 +9,8 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ec76ce3d52.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="jquery-3.6.0.js"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon"href="img/favicon.ico">
     <title>Digital Resume</title>
@@ -33,9 +35,9 @@
                 <nav class="navbar navbar-dark w-100 mt-4">
                     <a class="navbar-brand font-weight-bolder">DIGITAL RESUME</a>
                     <form class="form-inline">
-                        <button class="btn btn-outline-light my-2 my-sm-0 am-go" >About me</button>
-                        <button class="btn btn-outline-light  my-2 my-sm-0 w-go">Works</button>
-                        <button class="btn btn-outline-light my-2 my-sm-0 c-go">Contacts</button>
+                        <button class="btn btn-outline-light my-2 my-sm-0 am-go" ><a href="#intro-go">About me</a></button>
+                        <button class="btn btn-outline-light  my-2 my-sm-0 w-go"><a href="#works-go">Works</a></button>
+                        <button class="btn btn-outline-light my-2 my-sm-0 c-go"><a href="#contacts-go">Contacts</a></button>
                     </form>
                 </nav>
                 <div class="intro ">
@@ -49,8 +51,8 @@
                 </div>
                 <div id = "intro-go" class="aboutme ">
                     <div class="about-head d-flex flex-md-row">
-                        <div class="glitch-wrapper h ">
-                            ARTEM MOTOSHKIN, 20 Y.O.
+                        <div class="glitch-wrapper h  name">
+                            ARTEM MOTOSHKIN, 20
                         </div>
                         <div id = "am-huge" class="blnk">
                             <span   class="huge">ABOUT ME  </span>
@@ -69,7 +71,48 @@
                 <div class="works-wrapper ">
                     <div class="about-head d-flex flex-md-row">
                         <div class="blnk">
-                            <span  class="huge">MY WORKS</span>
+                            <span  class="huge" id = "works-go">MY WORKS</span>
+                        </div>
+                    </div>
+                    <div class="taskmaster-wrapper w-wrap d-flex flex-md-row">
+                        <div class="taskmaster-desc">
+                            Task manager made with Vanilla JS, using "drag'n'drop". There are all that u need to manage your tasks.
+                        </div>
+                        <div class="glitch-wrapper h taskmaster">
+                            <a href="https://frayzkilla.github.io/TaskMaster_VanillaJS/">TASKMASTER</a>
+                        </div>
+                    </div>
+                    <div class="weather-wrapper w-wrap d-flex flex-md-row">
+                        <div class="weather-desc">
+                            Easy weather assistant made with Vanilla JS, using "XHR". There are forecast based on your GPS coordinates.
+                        </div>
+                        <div class="glitch-wrapper h weather">
+                            <a href="https://frayzkilla.github.io/WeatherAPI__VanillaJS/">MYWEATHER</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-wrapper ">
+                    <div class="about-head">
+                        <div class="blnk">
+                            <span  class="huge" id = "contacts-go">CONTACTS</span>
+                        </div>
+                        <div class="icons">
+                            <i class="fa-brands fa-github icon-white"></i>
+                            <i class="fa-solid fa-at icon-white"></i>
+                            <i class="fa-brands fa-vk icon-white"></i>
+                            <i class="fa-solid fa-phone icon-white"></i>
+                            <input type="text" value="frayzthamotion@gmail.com" class = "text-field mail">
+                            <input type="text" value="+79834423855" class = "text-field phone">
+                        </div>
+                        <div class="helpers hide">
+                            <input type="text" value="frayzthamotion@gmail.com" class = "email_as">
+                            <input type="text" value="+79834423855" class = "phone_as">
+                        </div>
+                        <div class="phone_copied hide">
+                            phone number copied
+                        </div>
+                        <div class="email_copied hide">
+                            email address copied
                         </div>
                     </div>
                 </div>

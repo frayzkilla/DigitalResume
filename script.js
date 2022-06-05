@@ -14,9 +14,55 @@ setTimeout(function(){
             document.querySelector(".blnk").classList.add("blink-1");
         }, 500);
     }, 1500);
-}, 1500);
+}, 100);
 
-document.querySelector(".am-go").addEventListener("click", function(){
+/* document.querySelector(".am-go").addEventListener("click", function(){
     window.location.hash="intro-go";
-})
+}) */
 
+$('.fa-github').on('click', function(){
+    /* $(location).attr('href', "https://github.com/frayzkilla"); */
+    window.open("https://github.com/frayzkilla", '_blank');
+});
+
+$('.fa-vk').on('click', function(){
+    window.open("https://vk.com/frvyz", '_blank');
+});
+
+$('.fa-at').on('click', function(){
+    let copyText = $('.mail');
+    copyText.select();
+    document.execCommand("copy");
+    document.querySelector(".email_copied").classList.remove("hide");
+    document.querySelector(".email_copied").classList.add("blink-1");
+    setTimeout(function(){
+        document.querySelector(".email_copied").classList.add("hide");
+        document.querySelector(".email_copied").classList.remove("blink-1");
+    }, 1500)
+});
+
+$('.fa-phone').on('click', function(){
+    let copyText = $('.phone');
+    copyText.select();
+    document.execCommand("copy");
+    document.querySelector(".phone_copied").classList.remove("hide");
+    document.querySelector(".phone_copied").classList.add("blink-1");
+    setTimeout(function(){
+        document.querySelector(".phone_copied").classList.add("hide");
+        document.querySelector(".phone_copied").classList.remove("blink-1");
+    }, 1500)
+});
+
+$(".weather").hover(function () {
+    $(".weather-desc").animate({'opacity':'1'}, 100);
+},
+function () {
+    $(".weather-desc").animate({'opacity':'0'}, 100);
+});
+
+$(".taskmaster").hover(function () {
+    $(".taskmaster-desc").animate({'opacity':'1'}, 100);
+},
+function () {
+    $(".taskmaster-desc").animate({'opacity':'0'}, 100);
+});
