@@ -1,5 +1,3 @@
-
-
 setTimeout(function(){
     document.querySelector("#load").classList.add("fade-out");
     document.querySelector(".load-wrapper").classList.add("fade-out");
@@ -14,7 +12,7 @@ setTimeout(function(){
             document.querySelector(".blnk").classList.add("blink-1");
         }, 500);
     }, 1500);
-}, 100);
+}, 1500);
 
 $('.fa-github').on('click', function(){
     /* $(location).attr('href', "https://github.com/frayzkilla"); */
