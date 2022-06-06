@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="icon.ico" type="image/x-icon">
+    <title>TaskMaster</title>
+    <meta charset="UTF-8">
+</head>
+
+<body id = "body">
+    <header>
+        <p id = "htxt">TaskMaster</p>
+    </header>
+
+    <div class = "handle">
+        <button>Help</button>
+    </div>
+
+    <div class = "hero">
+        <div class = "wrapper" >
+            <div class="add_form hide">
+                <div class="add_inputs">
+                    <input type="text" class="add_title" placeholder = "Title...">
+                    <textarea type="text" class="add_info" placeholder = "Description..."></textarea>
+                </div>
+                <div class="add_buttons">
+                    <button class="add_button" onclick="addTask()">ADD</button>
+                    <button class="cancel_button" onclick="closeAddWindow()">CANCEL</button>
+                </div>
+            </div>
+            <div class = "col" id = "needto">
+                <ul class = "list" id = "js-list">
+                    <li class = "listcaption" id = "need">Need</li>
+                    <li class = "listcaption" id = "inprogress">In Progress</li>
+                    <li class = "listcaption" id = "complete">Complete</li>
+                    <li class = "listcell js-first" id = "cell1">
+                        <div class = "taskcard" id = "card1" draggable="true"> 
+                            <!-- <button class="delButton" onclick="deleteTask()">X</button> -->
+                            <div class = "taskcard-title" id = "title">
+                                Title
+                            </div>
+                            <div class = "taskcard-info" id = "info">
+                                Description
+                            </div>
+                        </div>
+                    </li>
+                    <li class = "listcell js-second" id = "cell2"></li>
+                    <li class = "listcell js-third" id = "cell3"></li>
+                </ul>
+            </div>
+            <div class = "buttons">
+                <ul class = "buttonlist">
+                    <li class = "addbutton">
+                        <button class = "taskbutton" onclick="openAddWindow('1')">Add</button>
+                    </li>
+                    <li class = "addbutton">
+                        <button class = "taskbutton" onclick="openAddWindow('2')">Add</button>
+                    </li>
+                    <li class = "addbutton">
+                        <button class = "taskbutton" onclick="openAddWindow('3')">Add</button>
+                    </li>
+                </ul>
+            </div>
+            <div class="trash" id = "trash">
+                <img src="trash.png" class = trash__can>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>

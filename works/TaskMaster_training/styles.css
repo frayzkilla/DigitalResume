@@ -1,0 +1,238 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+    margin: 0 auto;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.hero {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.wrapper {
+    max-width: 1024px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+.listcaption {
+    width: calc(33% - 40px);
+    margin: 20px 20px;
+    list-style-type: none;
+    font-weight: bold;
+    color: rgb(61, 61, 61);
+
+}
+
+.listcell {
+    width: calc(33% - 40px);
+    margin: 20px 20px;
+    list-style-type: none;
+    min-height: 150px;
+    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.2);
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    flex-direction: column;
+}
+
+.addbutton {
+    width: calc(33% - 40px);
+    margin: 20px 20px;
+    list-style-type: none;
+    min-height: 50px;
+    background-color: whitesmoke;
+    overflow: hidden;
+}
+
+.taskbutton {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.taskcard {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+    cursor: all-scroll;
+}
+
+.taskcard-title {
+    font-weight: bold;
+    padding: 15px 20px;
+    background-color: rgb(63, 63, 63);
+    color: aliceblue;
+    text-transform: uppercase;
+}
+
+.taskcard-info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+
+
+.hovered {
+    background-color:  rgb(209, 209, 209);
+}
+
+.hovered__trash {
+    background: rgb(144,144,144);
+    background: radial-gradient(circle, rgba(144,144,144,1) 0%, rgba(255,255,255,1) 60%);
+}
+
+header {
+    /*display: block;*/
+    height: 150px;
+    background: url(mstr.jpg) no-repeat center bottom;
+    /*position: fixed;*/
+    width: 100%;
+    top: 0;
+}
+
+#htxt {
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    color: aliceblue;
+    font-weight: 600;
+    text-shadow: 5px 2px 3px black;
+    padding-top: 30px;
+}
+
+.handle {
+    background-color: black;
+    height: 50px;
+    display: none;
+}
+
+button {
+    color: black;
+}
+
+.buttons {
+    max-width: 1024px;
+    margin: -100px auto;
+}
+
+.buttonlist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 100px 0;
+}
+
+.add_form {
+    position: absolute;
+    z-index: 100;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    text-align: center;
+    height: 150px;
+    width: 33%;
+    margin-left: 34.5%;
+    margin-right: auto;
+    padding: 10px;
+    background-color: rgb(214, 214, 214);
+    box-shadow: 0px 0px 7px 5px rgba(0, 0, 0, 0.2);
+}
+
+.add_inputs {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.add_buttons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 10px;
+}
+
+.add_button, .cancel_button {
+    text-align: center ;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 12px 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.2);
+}
+
+.col {
+    position: relative;
+}
+
+.hide {
+    display: none;
+}
+
+.delButton {
+    position:absolute;
+    align-self: flex-end;
+    margin: 7px;
+    z-index: 1000;
+	box-shadow:inset 0px 34px 0px -15px #adadad;
+	background-color:#afafaf;
+	border:1px solid #241d13;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:8px 11px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #505050;
+    
+}
+
+.delButton:hover {
+	background-color:#9b9b9b;
+}
+
+.delButton:active {
+	position:relative;
+	top:1px;
+}
+
+.trash {
+    margin-left: 95%;
+}
+.trash__can {
+    height: 50px;
+}

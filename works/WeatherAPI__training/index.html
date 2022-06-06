@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyWeather</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <img src="loading.png" class="preload rotate-center hide" id = 'preload'>
+
+    <div class="wrapper day " id = "mainwrap">
+        <div class="current">
+            <div class="city" id = "maincity">
+                Иркутск
+            </div>
+            <div class="description" id = "maindesc">
+                ясно
+            </div>
+            <div class="temperature" id = "maintemp">
+                +5
+            </div>
+        </div>
+
+        <div class="fc__cols">
+            <div class="fc__byhour">
+                <div class="fc__time">
+                    Now
+                </div>
+                <div class="fc__icon" id = "icon1">
+
+                </div>
+                <div class="fc__temp" id = "temp1">
+                    -5
+                </div>
+            </div>
+            <div class="fc__byhour">
+                <div class="fc__time" id = "time2">
+                    21
+                </div>
+                <div class="fc__icon" id = "icon2">
+
+                </div>
+                <div class="fc__temp" id = "temp2">
+                    -8
+                </div>
+            </div>
+            <div class="fc__byhour">
+                <div class="fc__time" id = "time3">
+                    0
+                </div>
+                <div class="fc__icon" id = "icon3">
+
+                </div>
+                <div class="fc__temp" id = "temp3">
+                    -6
+                </div>
+            </div>
+            <div class="fc__byhour">
+                <div class="fc__time" id = "time4">
+                    3
+                </div>
+                <div class="fc__icon" id = "icon4">
+
+                </div>
+                <div class="fc__temp" id = "temp4">
+                    -6
+                </div>
+            </div>
+            <div class="fc__byhour">
+                <div class="fc__time" id = "time5">
+                    6
+                </div>
+                <div class="fc__icon" id = "icon5">
+
+                </div>
+                <div class="fc__temp" id = "temp5">
+                    -6
+                </div>
+            </div>
+        </div>
+
+        <div class="details__cols">
+            <div class="left__details">
+                <div class="detail__first">
+                    <div class="detail__name">
+                        feels like:  
+                    </div>
+                    <div class="detail__value" id = "feels_like">
+                        -13
+                    </div>
+                </div>
+                <div class="detail__second">
+                    <div class="detail__name">
+                        pressure:  
+                    </div>
+                    <div class="detail__value" id = "pressure">
+                        17 мм р.с. 
+                    </div>
+                </div>
+            </div>
+            <div class="right__details">
+                <div class="detail__first">
+                    <div class="detail__name">
+                        humidity:  
+                    </div>
+                    <div class="detail__value" id = "humidity">
+                        50%
+                    </div>
+                </div>
+                <div class="detail__second">
+                    <div class="detail__name">
+                        wind:  
+                    </div>
+                    <div class="detail__value" id = "wind">
+                        17 м/с
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
